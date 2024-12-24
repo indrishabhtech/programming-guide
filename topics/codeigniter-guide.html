@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeIgniter 4 Project Guide</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <header>
+        <h1>CodeIgniter 4 Project Guide</h1>
+       <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="topics/socketio.html">Socket.IO</a></li>
+
+                <li><a href="topics/reactjs.html">React.js</a></li>
+
+                <li><a href="topics/laravel-guide.html">Laravel</a></li>
+
+                <li><a href="topics/codeigniter-guide.html">Codeigniter</a></li>
+
+                <li><a href="topics/laravel-guide.html">Laravel</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Introduction to CodeIgniter 4</h2>
+            <p>CodeIgniter is a powerful PHP framework designed for developers who need a simple and elegant toolkit to create full-featured web applications. This guide will help you set up your CodeIgniter 4 project quickly and easily.</p>
+        </section>
+
+        <section>
+            <h2>Step-by-Step Guide</h2>
+
+            <h3>Step 1: Setting Up Your Project</h3>
+            <ol>
+                <li>
+                    Navigate to your <code>htdocs</code> folder (commonly used with XAMPP) by opening the folder in your Command Prompt (CMD).
+                </li>
+                <li>
+                    Run the following command to create a new CodeIgniter 4 project using Composer:
+                    <pre><code>composer create-project codeigniter4/appstarter News</code></pre>
+                </li>
+                <p>This will create a new project named <strong>News</strong> in your <code>htdocs</code> directory.</p>
+            </ol>
+
+            <h3>Step 2: Running Your Project</h3>
+            <ol>
+                <li>Open the project folder in your preferred code editor or IDE.</li>
+                <li>
+                    To start your project, open a terminal in your editor or command prompt and run:
+                    <pre><code>php spark serve</code></pre>
+                </li>
+                <li>
+                    After running the command, your project will be live on the default port. Open your browser and navigate to:
+                    <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.
+                </li>
+            </ol>
+
+            <h3>Step 3: Creating Your First Web Page</h3>
+            <p>Now, you can start building your application. Here are some key steps:</p>
+            <ul>
+                <li>
+                    Create a new controller using the command:
+                    <pre><code>php spark make:controller Page</code></pre>
+                </li>
+                <li>
+                    Define your desired route in the <code>app/Config/Routes.php</code> file. For example:
+                    <pre><code>
+$routes->get('/about', 'Page::about');
+                    </code></pre>
+                </li>
+                <li>
+                    Add the logic for your webpage in the new controller (e.g., <code>app/Controllers/Page.php</code>):
+                    <pre><code>
+public function about()
+{
+    return view('about');
+}
+                    </code></pre>
+                </li>
+                <li>
+                    Create a corresponding view file in <code>app/Views/about.php</code> and add your HTML content.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Enhancements and Best Practices</h2>
+            <ul>
+                <li>
+                    **Use Environment Variables**: Configure your database and other settings in the <code>.env</code> file for better security and flexibility.
+                </li>
+                <li>
+                    **Built-in Authentication**: Utilize CodeIgniter 4's built-in authentication feature for user login and registration.
+                </li>
+                <li>
+                    **Debugging Tools**: Take advantage of CodeIgniter's debugging toolbar to identify and resolve issues quickly.
+                </li>
+                <li>
+                    **Follow MVC Pattern**: CodeIgniter 4 follows the Model-View-Controller (MVC) architectural pattern. Always keep your business logic in models and use controllers to handle requests.
+                </li>
+                <li>
+                    **Optimize Performance**: Use caching and query builders to optimize the performance of your application.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Programming Guide</p>
+    </footer>
+</body>
+</html>
